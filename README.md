@@ -1,3 +1,6 @@
+## TO PREVIEW THIS FILE BETTER, DOWNLOAD & OPEN IN NOTEPAD++ EDITOR
+
+
 ### ----------- Folder Structure for the ansible role -----------
 
 Ansible-Base-Project
