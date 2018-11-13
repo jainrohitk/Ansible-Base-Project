@@ -2,18 +2,18 @@
 
 
 ### ----------- Folder Structure for the ansible role -----------
-##production              # inventory file for production servers
-##staging                 # inventory file for staging environment
+#####production           # inventory file for production servers
+#####staging              # inventory file for staging environment
 
-##group_vars/
+#####group_vars/
    group1.yml             # here we assign variables to particular groups
    group2.yml
 
-##host_vars/
+#####host_vars/
    hostname1.yml          # here we assign variables to particular systems
    hostname2.yml
 
-##library/                # if any custom modules, put them here (optional)
+#####library/             # if any custom modules, put them here (optional)
 module_utils/             # if any custom module_utils to support modules, put them here (optional)
 filter_plugins/           # if any custom filter plugins, put them here (optional)
 
@@ -21,7 +21,7 @@ site.yml                  # master playbook
 webservers.yml            # playbook for webserver tier
 dbservers.yml             # playbook for dbserver tier
 
-###roles/
+#####roles/
     common/               # this hierarchy represents a "role"
         tasks/            #
             main.yml      #  <-- tasks file can include smaller files if warranted
