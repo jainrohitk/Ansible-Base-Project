@@ -1,0 +1,7 @@
+---
+# defaults file for Ansible-Base-Project
+
+Variable1: Value1
+Variable2: Value2
+Variable3: Value3
+

@@ -1,0 +1,22 @@
+---
+- name: Add the OS specific varibles
+  include_vars: "{{ ansible_os_family }}.yml"
+  
+- name: PUT YOUR TASK NAME HERE - THIS SECTION ALSO DESCRIBE USE OF DEFAULT VARIABLES
+  get_url:
+    url: "{{ var1 }}"
+    dest: "{{ var2 }}"
+    mode: 0600
+    backup: yes
+  
+- name: USE OF TEMPLATES, VARS & HANDLERS 
+  template:
+    src: template.txt
+    dest: /tmp/{{ var4 }}
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+  notify:
+    - restart Apache
+   

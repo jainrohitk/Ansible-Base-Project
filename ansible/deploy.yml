@@ -1,0 +1,4 @@
+---
+- hosts: myhostgroup
+  roles:
+  - { role: myrole, become: yes, become_user: myuser }

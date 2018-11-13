@@ -1,0 +1,17 @@
+[myhostgroup]
+Ansible-target1
+Ansible-target2
+
+[all]
+Ansible-target1
+Ansible-target2
+Ansible-target3
+
+[server-group1]
+Ansible-target1
+
+[server-group2]
+Ansible-target2
+
+[server-group3]
+Ansible-target3

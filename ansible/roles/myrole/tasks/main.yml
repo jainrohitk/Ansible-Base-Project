@@ -1,0 +1,6 @@
+---
+- include_tasks: "{{ ansible_os_family }}.yml"
+  when: ansible_os_family == "RedHat" or ansible_distribution == "CentOS" 
+
+- include_tasks: "{{ ansible_os_family }}.yml"
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
