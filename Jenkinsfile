@@ -1,18 +1,6 @@
 #!/usr/bin/env groovy
 
-final String REGISTRY_URL = "https://fs-pcm-docker.maven.etb.tieto.com"
-final String REGISTRY_CREDENTIALS = "artifactory-uploader"
-
-
 	node('agent-01') {
-		docker.withRegistry(REGISTRY_URL, REGISTRY_CREDENTIALS) {
-			stage('Prepare') {
-				deleteDir()
-				checkout scm
-				sh "git rev-parse HEAD > .git/commit-id"
-				commitId = readFile('.git/commit-id').trim()
-			}
-
 			stage('SCM Checkout') {
 					deleteDir()
 					checkout scm
@@ -20,16 +8,18 @@ final String REGISTRY_CREDENTIALS = "artifactory-uploader"
 					commitId = readFile('.git/commit-id').trim()
 			}
 			
-			stage('Zabbix agent installation') {
-				if (env.JOB_NAME == 'pcm-zabbix-agent_install-master-deliver') {
+			stage('Ansible Task Execution') {
+				
+				if (env.JOB_NAME == 'PUT YOUR JENKINS Master Deliver JOB NAME') {
+					
 					echo 'Syntax check already passed for the ansible role'
-					echo 'Executing the ansible role for zabbix agent installation on target machines'
+					echo 'Executing the ansible role on target machines'
 					
 					withEnv(["ANSIBLE_HOST_KEY_CHECKING=False", "ANSIBLE_CONFIG=ansible/ansible.cfg"]) {
 						ansiblePlaybook(
 							playbook: 'ansible/deploy.yml',
 							inventory: 'ansible/inventory',
-							credentialsId: 'smoketestuser',
+							credentialsId: 'pcmsadmin-ssh-key',
 							extras: '-vv'
 						)
 					}
@@ -47,5 +37,5 @@ final String REGISTRY_CREDENTIALS = "artifactory-uploader"
 				}
 			}
 
-		}
+		
 	}
