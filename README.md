@@ -51,7 +51,7 @@ you can clone this project using the "git clone" command.
 
 
 
-###### Mandatory section for ansible project  #########################
+###### ----------- Mandatory section for ansible project  -----------
 
 └───ansible
     │   ansible.cfg
@@ -78,8 +78,7 @@ Add the host specific details in the inventory host file.
 
 
 
-###### Optional sections for ansible project #########################
-
+###### ----------- Optional sections for ansible project -----------
 roles
         └───myrole
             ├───defaults
@@ -108,7 +107,7 @@ Incase of any template/file to be copied to the target machine, use "templates" 
 Incase of variables, change the variables under the "vars" subfolders.
 
  
-#################### JENKINS SPECIFIC SECTION #########################################
+###### ----------- JENKINS SPECIFIC SECTION -----------
 
 Jenkinsfile will be used to make Jenkins pipeline deployment. We just need to add more/less 
 stages depending on the desired actions to be performed.
