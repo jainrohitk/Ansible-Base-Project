@@ -42,7 +42,8 @@ Ansible-Base-Project
 
 
 
-#################### Ansible-Base-Project README section ####################
+
+###### Ansible-Base-Project README section ####################
 
 This project can be used for any kind of deployment using the ansible role. 
 
@@ -109,4 +110,5 @@ Incase of variables, change the variables under the "vars" subfolders.
  
 #################### JENKINS SPECIFIC SECTION #########################################
 
-Jenkinsfile will be used to make Jenkins pipeline deployment. We just need to add more/less stages depending on the desired actions to be performed.
+Jenkinsfile will be used to make Jenkins pipeline deployment. We just need to add more/less 
+stages depending on the desired actions to be performed.
