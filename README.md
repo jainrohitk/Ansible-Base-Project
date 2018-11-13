@@ -1,6 +1,4 @@
-#############################################################
-Folder Structure for the ansible role: 
--------------------------------------------------------------
+### ----------- Folder Structure for the ansible role -----------
 
 Ansible-Base-Project
 │   .gitignore
@@ -43,15 +41,15 @@ Ansible-Base-Project
 
 
 
-###### ----------- Ansible-Base-Project README section -----------
+### ----------- Ansible-Base-Project README section -----------
 
-This project can be used for any kind of deployment using the ansible role. 
+##### This project can be used for any kind of deployment using the ansible role. 
 
 you can clone this project using the "git clone" command. 
 
 
 
-###### ----------- Mandatory section for ansible project  -----------
+### ----------- Mandatory section for ansible project  -----------
 
 └───ansible
     │   ansible.cfg
@@ -78,7 +76,7 @@ Add the host specific details in the inventory host file.
 
 
 
-###### ----------- Optional sections for ansible project -----------
+### ----------- Optional sections for ansible project -----------
 roles
         └───myrole
             ├───defaults
@@ -98,16 +96,16 @@ roles
                     Ubuntu.yml
 
 					
-Incase of any default variables, use the "main.yml" under "defaults" subfolder. 
+##### Incase of any default variables, use the "main.yml" under "defaults" subfolder. 
 
-Incase of any actions to be peformed on some conditions or post any specific task execution, use the "main.yml" under "handlers" subfolder. 
+##### Incase of any actions to be peformed on some conditions or post any specific task execution, use the "main.yml" under "handlers" subfolder. 
 
-Incase of any template/file to be copied to the target machine, use "templates" subfolder.
+##### Incase of any template/file to be copied to the target machine, use "templates" subfolder.
 
-Incase of variables, change the variables under the "vars" subfolders.
+##### Incase of variables, change the variables under the "vars" subfolders.
 
  
-###### ----------- JENKINS SPECIFIC SECTION -----------
+### ----------- JENKINS SPECIFIC SECTION -----------
 
-Jenkinsfile will be used to make Jenkins pipeline deployment. We just need to add more/less 
+##### Jenkinsfile will be used to make Jenkins pipeline deployment. We just need to add more/less 
 stages depending on the desired actions to be performed.
